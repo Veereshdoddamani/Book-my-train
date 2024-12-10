@@ -1,0 +1,141 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.bg {
+    background-image: url("istockphoto-1458752782-612x612.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+
+.header {
+    text-align: center;
+    color: rgb(10, 10, 10);
+    margin-top: 20px;
+}
+
+.header h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.highlight {
+    display: inline-block;
+    background-color: rgb(118, 122, 123);
+    border-radius: 4px;
+    padding: 2px 6px;
+    color: white;
+}
+
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(219, 220, 223, 0.8);
+    border-radius: 10px;
+    padding: 30px;
+    margin: auto;
+    width: 40%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+    opacity: 0.8;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.input-group .icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+
+.arrow-container {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.arrow-container .arrow {
+    width: 40px;
+    height: auto;
+}
+
+
+.date-label {
+    font-size: 1rem;
+    margin-top: 20px;
+    display: block;
+    text-align: left;
+    width: 100%;
+}
+
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+
+.btn {
+    display: inline-block;
+    background-color: rgb(24, 219, 241);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: rgb(0, 100, 200);
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        width: 90%;
+    }
+
+    .input-group input {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+    }
+}
+    
+
+    /* General styling for the page */
+/* General styling for the page */

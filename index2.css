@@ -1,0 +1,31 @@
+.login{
+    display: inline-block;
+    background-color:rgb(181, 178, 178);
+    text-align: center;
+    margin-top: 6%;
+    margin-left: 40%;
+    padding: 25px 100px;
+    border-radius: 50px;
+    font-size: 23px;
+    opacity: 0.7;
+}
+
+.sign{
+    padding: 4px 13px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 10px;
+}
+
+.bg{
+    background-image: url("gradient-hexagonal-background_79603-1593.avif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.sign:hover{
+    background-color: rgb(255, 0, 0);
+    color: white;
+    transform: scale(1.1);
+}

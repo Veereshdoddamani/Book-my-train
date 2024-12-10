@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passenger Details</title>
+    
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #007BFF;
+        }
+
+        h3 {
+            text-align: left;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input, select, button {
+            margin-top: 5px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .back-btn {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .back-btn a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        .back-btn a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Passenger Details</h2>
+        <form id="passenger-form" onsubmit="return handleFormSubmit(event)">
+            <label for="passenger-name">Name:</label>
+            <input type="text" id="passenger-name" name="passenger_name" placeholder="Enter your name" required>
+
+            <label for="passenger-age">Age:</label>
+            <input type="number" id="passenger-age" name="passenger_age" placeholder="Enter your age" min="0" required>
+
+            <label for="passenger-gender">Gender:</label>
+            <select id="passenger-gender" name="passenger_gender" required>
+                <option value="" disabled selected>Select gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select><br>
+
+            <label for="seat-preference">Seat Preference:</label>
+            <select id="seat-preference" name="seat_preference" required>
+                <option value="" disabled selected>Select preference</option>
+                <option value="Window">Window</option>
+                <option value="Aside">Aside</option>
+                <option value="Middle">Middle</option>
+                <option value="No Preference">No Preference</option>
+            </select><br><br>
+
+            <button type="submit">Proceed</button>
+        </form>
+    </div>
+
+    <script>
+        // Handle form submission
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            // Retrieve form data
+            const name = document.getElementById('passenger-name').value;
+            const age = document.getElementById('passenger-age').value;
+            const gender = document.getElementById('passenger-gender').value;
+            const preference = document.getElementById('seat-preference').value;
+
+            // Redirect to confirmation page with query parameters
+            const queryParams = new URLSearchParams({
+                name: name,
+                age: age,
+                gender: gender,
+                preference: preference
+            }).toString();
+
+            window.location.href = `confm.html?${queryParams}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/index.css">
+    <title>Book My Train</title>
+</head>
+<body>
+    <div class="sp-container">
+        <div class="sp-content">
+            <div class="sp-globe"></div>
+            <div class="transition-text">
+                <span>B</span><span>O</span><span>O</span><span>K</span> 
+                <span>M</span><span>Y</span> 
+                <span>T</span><span>R</span><span>A</span><span>I</span><span>N</span>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        window.onload = function() {
+            const transitionText = document.querySelector('.transition-text');
+
+            // Add fade-out effect to the text
+            setTimeout(function() {
+                transitionText.style.transition = 'opacity 2s';
+                transitionText.style.opacity = 0;
+            }, 2000); // Fade out after 2 seconds
+
+            // Redirect to the next page after the fade effect
+            setTimeout(function() {
+                window.location.href = '/index2'; // Flask route
+            }, 4000); // Wait for 4 seconds (fade out duration)
+        };
+    </script>
+</body>
+</html>
+

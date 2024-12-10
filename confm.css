@@ -1,0 +1,117 @@
+/* General styling for the page */
+body.bg {
+    background-image: url("train-background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Confirmation message box styling */
+.confirmation {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 90%;
+    text-align: left;
+    margin-top: 50px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.confirmation h1 {
+    font-size: 2.4rem;
+    color: #28a745;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.confirmation p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.confirmation ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    font-size: 1rem;
+}
+
+.confirmation ul li {
+    font-size: 1rem;
+    margin: 12px 0;
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.confirmation strong {
+    color: #007bff;
+}
+
+/* Button styling */
+a.home-btn {
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+a.home-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Smooth fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .confirmation {
+        padding: 20px;
+    }
+
+    .confirmation h1 {
+        font-size: 2rem;
+    }
+
+    .confirmation p, 
+    .confirmation ul li {
+        font-size: 0.9rem;
+    }
+
+    a.home-btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}

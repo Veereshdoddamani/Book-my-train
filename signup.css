@@ -1,0 +1,83 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg {
+    background-image: url("selective-focus-photography-of-yellow-flower-wallpaper-preview.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    height: 100vh;
+}
+
+.h1 {
+    text-align: center;
+    color: rgb(10, 10, 10);
+    font-size: 30px;
+    margin-top: 50px;
+}
+
+.signup {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px 50px;
+    background-color: rgb(159, 160, 161);
+    border-radius: 15px;
+    opacity: 0.9;
+}
+
+.box {
+    display: inline-block;
+    background-color: rgb(202, 201, 198);
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 30px;
+    opacity: 0.8;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+form input:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #71efb0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #14dcef;
+}
+
+@media (max-width: 600px) {
+    .signup {
+        padding: 15px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Confirmation</title>
+    <link rel="stylesheet" href="../static/confm.css"> <!-- Link to external CSS -->
+</head>
+<body class="bg">
+    <div class="confirmation">
+        <h1>Your Ticket is Confirmed!</h1>
+        <p>Thank you for booking with <strong>Book My Train</strong>.</p>
+        <p><strong>Details:</strong></p>
+        <ul>
+            <li><strong>Passenger Name:</strong> <span id="name"></span></li>
+            <li><strong>Age:</strong> <span id="age"></span></li>
+            <li><strong>Gender:</strong> <span id="gender"></span></li>
+            <li><strong>Seat Preference:</strong> <span id="preference"></span></li>
+        </ul>
+        <!-- Use anchor tag directly -->
+        <a href="search.html" class="home-btn">Home</a>
+    </div>
+
+    <script>
+        // Extract query parameters from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name');
+        const age = urlParams.get('age');
+        const gender = urlParams.get('gender');
+        const preference = urlParams.get('preference');
+
+        // Populate the confirmation details
+        document.getElementById('name').textContent = name;
+        document.getElementById('age').textContent = age;
+        document.getElementById('gender').textContent = gender;
+        document.getElementById('preference').textContent = preference;
+    </script>
+</body>
+</html>
